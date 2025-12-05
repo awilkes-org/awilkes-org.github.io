@@ -1,0 +1,19 @@
+title: "My Simple Blog"
+description: "Thoughts, notes, and experiments."
+author: "Alastair Wilkes"
+
+# Use GitHub’s default supported theme
+theme: minima
+
+# If your site lives at https://your-username.github.io
+url: "https://awilkes-org.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Optional nice-to-haves
+permalink: /:year/:month/:day/:title/
