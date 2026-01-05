@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section class="home">
+  <!-- {% if page.title %}
+    <h1>{{ page.title }}</h1>
+  {% endif %}
+
+  {% assign latest = site.posts.first %}
+
+  {% if latest %}
+    <article class="latest-post">
+      <h2>
+        <a href="{{ latest.url | relative_url }}">
+          {{ latest.title }}
+        </a>
+      </h2>
+      <p class="post-meta">
+        {{ latest.date | date: "%B %-d, %Y" }}
+      </p>
+      {{ latest.excerpt }}
+    </article>
+  {% endif %}
+
+  {% if page.content %}
+    <div class="intro">
+      {{ content }}
+    </div>
+  {% endif %} -->
+
+  <h2>Latest posts</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="post-meta">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>   
+ 
