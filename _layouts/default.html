@@ -4,15 +4,17 @@
     {% include head.html %}
   </head>
   <body>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" role="banner">
       {% include header.html %}
     </header>
 
-    <main>
+    <main id="main-content">
       {{ content }}
-    </main> 
+    </main>
 
-    <footer>
+    <footer class="site-footer" role="contentinfo">
       {% include footer.html %}
     </footer>
   </body>

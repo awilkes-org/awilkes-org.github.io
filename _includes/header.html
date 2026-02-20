@@ -1,5 +1,11 @@
-<h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-<!-- <nav>
-  <a href="{{ '/' | relative_url }}">Home</a>
-  <a href="{{ '/about/' | relative_url }}">About</a>
-</nav> -->
+<div class="site-header__inner">
+  <a href="{{ '/' | relative_url }}" class="site-title" rel="home">
+    {{ site.title }}
+  </a>
+  <hr class="site-header__rule" aria-hidden="true">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+    <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </nav>
+</div>

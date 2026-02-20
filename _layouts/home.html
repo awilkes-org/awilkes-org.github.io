@@ -1,43 +1,26 @@
 ---
 layout: default
 ---
-<section class="home">
-  <!-- {% if page.title %}
-    <h1>{{ page.title }}</h1>
-  {% endif %}
+<section class="home" aria-label="Blog posts">
+  <h1 class="visually-hidden">Latest posts</h1>
 
-  {% assign latest = site.posts.first %}
-
-  {% if latest %}
-    <article class="latest-post">
-      <h2>
-        <a href="{{ latest.url | relative_url }}">
-          {{ latest.title }}
-        </a>
-      </h2>
-      <p class="post-meta">
-        {{ latest.date | date: "%B %-d, %Y" }}
-      </p>
-      {{ latest.excerpt }}
-    </article>
-  {% endif %}
-
-  {% if page.content %}
-    <div class="intro">
-      {{ content }}
-    </div>
-  {% endif %} -->
-
-  <h2>Latest posts</h2>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
+  {% for post in site.posts %}
+    <article class="post-preview">
+      <h2 class="post-preview__title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-meta">
-          {{ post.date | date: "%B %-d, %Y" }}
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
-</section>   
- 
+      </h2>
+      <time class="post-preview__date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </time>
+      <div class="post-preview__excerpt">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ post.url | relative_url }}" class="post-preview__read-more" aria-label="Read more: {{ post.title }}">
+        Read more &rarr;
+      </a>
+    </article>
+    {% unless forloop.last %}
+      <hr class="post-separator" aria-hidden="true">
+    {% endunless %}
+  {% endfor %}
+</section>
