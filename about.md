@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Hi, I am Alastair Wilkes and this is my small blog hosted on GitHub Pages.
+Posts about product management, software, and everything in between.
 
-I write about whatever I am learning or working on.
+You can email me at `aw at awilkes dot org` or find me on [LinkedIn](https://www.linkedin.com/in/alastairwilkes/).
