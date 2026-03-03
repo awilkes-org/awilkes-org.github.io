@@ -1,5 +1,75 @@
 /* ======================
-   1. Custom Properties
+   1. Fonts
+   ====================== */
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/playfair-display-latin-700-800.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/assets/fonts/playfair-display-latin-700-800.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/source-sans-3-latin-400-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/source-sans-3-latin-400-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/source-sans-3-latin-400-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/source-sans-3-latin-italic-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* ======================
+   2. Custom Properties
    ====================== */
 
 :root {
@@ -21,7 +91,7 @@
 }
 
 /* ======================
-   2. Reset / Base
+   3. Reset / Base
    ====================== */
 
 *, *::before, *::after {
@@ -55,7 +125,7 @@ img {
 }
 
 /* ======================
-   3. Typography
+   4. Typography
    ====================== */
 
 h1, h2, h3, h4, h5, h6 {
@@ -100,7 +170,7 @@ hr {
 }
 
 /* ======================
-   4. Links
+   5. Links
    ====================== */
 
 a {
@@ -117,7 +187,7 @@ a:hover {
 }
 
 /* ======================
-   5. Layout
+   6. Layout
    ====================== */
 
 .site-header__inner,
@@ -129,7 +199,7 @@ main,
 }
 
 /* ======================
-   6. Skip Link
+   7. Skip Link
    ====================== */
 
 .skip-link {
@@ -152,7 +222,7 @@ main,
 }
 
 /* ======================
-   7. Header / Masthead
+   8. Header / Masthead
    ====================== */
 
 .site-header {
@@ -213,7 +283,7 @@ main,
 }
 
 /* ======================
-   8. Homepage / Post List
+   9. Homepage / Post List
    ====================== */
 
 .home h1 {
@@ -271,7 +341,7 @@ main,
 }
 
 /* ======================
-   9. Post / Article
+   10. Post / Article
    ====================== */
 
 .post__header {
@@ -310,7 +380,7 @@ main,
 }
 
 /* ======================
-   10. Post Navigation
+   11. Post Navigation
    ====================== */
 
 .post-nav {
@@ -368,7 +438,7 @@ main,
 }
 
 /* ======================
-   11. Page
+   12. Page
    ====================== */
 
 .page__title {
@@ -380,7 +450,7 @@ main,
 }
 
 /* ======================
-   11. Footer
+   13. Footer
    ====================== */
 
 .site-footer {
@@ -397,7 +467,7 @@ main,
 }
 
 /* ======================
-   12. Code Blocks
+   14. Code Blocks
    ====================== */
 
 code {
@@ -425,7 +495,7 @@ pre code {
 }
 
 /* ======================
-   13. Utilities
+   15. Utilities
    ====================== */
 
 .visually-hidden {
@@ -446,7 +516,7 @@ pre code {
 }
 
 /* ======================
-   14. Focus Styles
+   16. Focus Styles
    ====================== */
 
 :focus-visible {
@@ -455,7 +525,7 @@ pre code {
 }
 
 /* ======================
-   15. Reduced Motion
+   17. Reduced Motion
    ====================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -469,7 +539,7 @@ pre code {
 }
 
 /* ======================
-   16. Responsive
+   18. Responsive
    ====================== */
 
 @media (max-width: 600px) {
