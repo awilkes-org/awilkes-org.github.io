@@ -17,5 +17,29 @@
     <footer class="site-footer" role="contentinfo">
       {% include footer.html %}
     </footer>
+
+    <script>
+      (function () {
+        const links = document.querySelectorAll('a[href]');
+        for (const link of links) {
+          if (link.hasAttribute('target')) continue;
+
+          const href = link.getAttribute('href');
+          if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) continue;
+
+          let url;
+          try {
+            url = new URL(href, window.location.href);
+          } catch {
+            continue;
+          }
+
+          if (url.origin !== window.location.origin) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
